@@ -1,22 +1,20 @@
-<ion-view title="Item Detail" id="page5">
+<ion-view title="{{item.name}}" id="page5">
   <ion-content padding="true" class="has-header">
-    <div style="margin: 0px; line-height: 250px; text-align: center; background-color: rgb(232, 235, 239);">
+    <div style="margin: 0px; text-align: center; background-color: rgb(232, 235, 239);">
       <!--<i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>-->
       <img src="{{item.image}}" style="width: 100%">
     </div>
     <div id="itemDetail-markdown2" class="show-list-numbers-and-dots">
-      <p style="color:#000000;">Some friendly
-        <strong>markdown</strong>
-      </p>
+      {{item.desc}}
     </div>
-    <h4 id="itemDetail-heading3" style="color:#CFC552;text-align:right;">Total: ${{price}}</h4>
+    <h4 id="itemDetail-heading3" style="color:#CFC552;text-align:right;">Total: ${{item.price}}</h4>
     <form id="itemDetail-form1" class="list">
       <label class="item item-input" id="itemDetail-input1">
         <span class="input-label">Quantity</span>
         <input type="number" placeholder="" ng-model="quantity">
       </label>
     </form>
-    <h4 id="itemDetail-heading4" style="color:#C29A17;">SubTotal: ${{price * quantity}}</h4>
+    <h4 id="itemDetail-heading4" style="color:#C29A17;">SubTotal: ${{item.price * quantity}}</h4>
     <button id="itemDetail-button4" class="button button-positive  button-block">Add to Cart</button>
     <button id="itemDetail-button5" class="button button-assertive  button-block">Delete</button>
   </ion-content>

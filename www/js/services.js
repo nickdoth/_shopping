@@ -46,8 +46,40 @@ angular.module('app.services', [])
             return items.filter(function(n) { return n.department === 'men' });
         },
 
+        getItem(id) {
+            return items.filter(function (n) { return n.id === id })[0];
+        },
+
         getWomenItems() {
             return items.filter(function(n) { return n.department === 'women'});
+        },
+
+        shop(id, quantity) {
+            this.getItem(id).quantity = quantity;
+        },
+
+        deleteShop(id) {
+            this.getItem(id).quantity = 0;
+        }
+    }
+}])
+
+.factory('Door', ['$http', function($http) {
+    return {
+        signin(userid, password) {
+            var data = {
+                userid: userid,
+                password: password
+            }
+            return $http.post('http://simplelogin.cs7141.comp.hkbu.edu.hk/User/signin', data);
+        },
+
+        signup(userid, password) {
+            var data = {
+                userid: userid,
+                password: password
+            }
+            return $http.post('http://simplelogin.cs7141.comp.hkbu.edu.hk/User/signup', data);
         }
     }
 }])

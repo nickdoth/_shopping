@@ -1,8 +1,8 @@
 <ion-view title="Women" id="page7">
   <ion-content padding="true" class="has-header">
     <a class="list card" style="display:block;text-decoration:none;" 
-      ui-sref="tabsController.itemDetail(item)" id="women-card22"
-        ng-repeat="item in items">
+      ui-sref="tabsController.itemDetail({ id: '{{item.id}}' })" id="women-card22"
+      ng-repeat="item in items">
       <ion-item id="women-list-item14">{{item.name}}</ion-item>
       <div style="margin: 0px; line-height: 0px; text-align: center; background-color: rgb(232, 235, 239);">
         <!--<i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>-->

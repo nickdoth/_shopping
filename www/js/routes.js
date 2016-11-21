@@ -10,7 +10,7 @@ angular.module('app.routes', [])
     
   
 
-      .state('tabsController.cart', {
+  .state('tabsController.cart', {
     url: '/cart',
     views: {
       'tab3': {
@@ -33,12 +33,20 @@ angular.module('app.routes', [])
   })
 
   .state('tabsController.itemDetail', {
-    url: '/item/:price/:image/:desc',
+    url: '/item/:id',
     views: {
       'tab1': {
         templateUrl: 'templates/itemDetail.html',
         controller: 'itemDetailCtrl'
-      }
+      },
+      // 'tab2': {
+      //   templateUrl: 'templates/itemDetail.html',
+      //   controller: 'itemDetailCtrl'
+      // },
+      // 'tab3': {
+      //   templateUrl: 'templates/itemDetail.html',
+      //   controller: 'itemDetailCtrl'
+      // }
     }
   })
 
