@@ -29,7 +29,7 @@ angular.module('app.routes', [])
   .state('tabsController', {
     url: '/page1',
     templateUrl: 'templates/tabsController.html',
-    abstract:true
+    abstract: true
   })
 
   .state('tabsController.itemDetail', {
@@ -39,10 +39,20 @@ angular.module('app.routes', [])
         templateUrl: 'templates/itemDetail.html',
         controller: 'itemDetailCtrl'
       },
-      // 'tab2': {
+      // 'tab3': {
       //   templateUrl: 'templates/itemDetail.html',
       //   controller: 'itemDetailCtrl'
-      // },
+      // }
+    }
+  })
+
+  .state('tabsController.itemDetailWomen', {
+    url: '/item/:id',
+    views: {
+      'tab2': {
+        templateUrl: 'templates/itemDetail.html',
+        controller: 'itemDetailCtrl'
+      },
       // 'tab3': {
       //   templateUrl: 'templates/itemDetail.html',
       //   controller: 'itemDetailCtrl'
